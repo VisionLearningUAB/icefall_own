@@ -28,12 +28,15 @@ import logging
 import os
 from pathlib import Path
 from typing import Optional
+import sys
 
 import sentencepiece as spm
 import torch
 from filter_cuts import filter_cuts
 from lhotse import CutSet, Fbank, FbankConfig, LilcomChunkyWriter
 from lhotse.recipes.utils import read_manifests_if_cached
+
+sys.path.append("/mnt/ahogpu_ldisk2/adriang/icefall_own")
 
 from icefall.utils import get_executor, str2bool
 
